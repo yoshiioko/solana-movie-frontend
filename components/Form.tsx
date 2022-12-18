@@ -73,6 +73,9 @@ export const Form: FC = () => {
 
     try {
       let txid = await sendTransaction(transaction, connection);
+      alert(
+        `Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`
+      );
       console.log(
         `Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`
       );
